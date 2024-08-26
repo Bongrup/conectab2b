@@ -20,7 +20,7 @@ function facturas_content() {
                     </div>
                     <div class="form-group">
                         <label for="factura_fecha_hasta"><?php esc_html_e( 'Fecha Hasta', 'conectab2b' ); ?></label>
-                        <input type="date" id="factura_fecha_hasta" name="factura_fecha_hasta" value="<?php echo esc_attr(date('Y-m-d')); ?>" />
+                        <input type="date" id="factura_fecha_hastag" name="factura_fecha_hasta" value="<?php echo esc_attr(date('Y-m-d')); ?>" />
                     </div>
                     <div class="form-group">
                         <label for="factura_estado"><?php esc_html_e( 'Estado', 'conectab2b' ); ?></label>
