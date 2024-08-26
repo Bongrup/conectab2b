@@ -90,8 +90,10 @@ $table_prefix = 'tep_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
-define( 'WP_POST_REVISIONS', false );
+define('WP_DEBUG', false);
+define('WP_DEBUG_LOG', false);
+define('WP_DEBUG_DISPLAY', false);
+@ini_set('display_errors', 0);
 
 
 /* Add any custom values between this line and the "stop editing" line. */
