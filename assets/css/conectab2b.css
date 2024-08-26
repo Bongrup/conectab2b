@@ -1,0 +1,115 @@
+.facturas-wrapper {
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-primary {
+    background-color: #6b82a7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.button-secondary {
+    background-color: #6b82a7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+    background-color: #56697a;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f4f4f4;
+}
+
+/* Nuevas reglas para la tabla de facturas */
+.facturas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.facturas-table th,
+.facturas-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.facturas-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.facturas-table td {
+    vertical-align: middle;
+}
+
+.facturas-table a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.facturas-table a:hover {
+    text-decoration: underline;
+}
+
+.facturas-wrapper .button-primary {
+    background-color: #6699cc;
+    border-color: #6699cc;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.facturas-wrapper .button-secondary {
+    background-color: #cccccc;
+    border-color: #cccccc;
+    color: #333;
+}
