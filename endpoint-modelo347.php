@@ -21,24 +21,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 function modelo347_content() {
     if ( current_user_can( get_option( 'conb2b_role', 'administrator' ) ) ) {
         echo '<h3>' . __( 'Modelo 347', 'conectab2b' ) . '</h3>';
-        echo '<p>' . __( 'Aquí podrás descargar tu Modelo 347.', 'conectab2b' ) . '</p>';
+        echo '<p>' . __( 'Aquí podrás descargar tu informe modelo 347.', 'conectab2b' ) . '</p>';
         
-        // Botón para probar la conexión con MockAPI
+        // Botón para descargar Modelo 347
         echo '<div class="form-group">';
-        echo '<button id="test-magicloops" class="button-primary" style="background-color: green; color: white;">';
-        echo 'PROBAR MOCKAPI';
-        echo '</button>';
+        echo '<a href="#" class="button-primary" style="background-color: green; color: white; padding: 10px 20px; text-decoration: none;">';
+        echo __( 'DESCARGAR MODELO 347', 'conectab2b' );
+        echo '</a>';
         echo '</div>';
-        
-        // Div para mostrar la respuesta de la API
-        echo '<div id="mockapi-response" style="margin-top: 20px;"></div>';
-        
-        // Incluir la URL de la API desde la base de datos y el archivo JavaScript
-        echo '<script type="text/javascript">
-                var apiUrl = "' . esc_url(get_option('conb2b_api_url', '')) . '";
-              </script>';
-        echo '<script src="' . esc_url(plugins_url('/assets/js/prueba-api.js', __FILE__)) . '"></script>';
-        
+
+        // Aquí iría la lógica para mostrar los albaranes del cliente
     } else {
         echo '<p>' . __( 'No tienes permisos para acceder a esta sección.', 'conectab2b' ) . '</p>';
     }
