@@ -14,3 +14,101 @@
 #mockapi-response {
     margin-top: 20px;
 }
+
+/* Estilos para la tabla */
+.table-container {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+    border: none;
+    /* Eliminamos todos los bordes */
+}
+
+.table-container th {
+    border-bottom: 2px solid #ddd;
+    /* Solo mantenemos el borde inferior de la cabecera */
+    font-weight: bold;
+    background-color: transparent;
+    /* Quitamos el fondo gris */
+}
+
+.table-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-container tr.selected {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+/* Estilos específicos para los botones IMP y @ */
+.table-container .button-imp,
+.table-container .button-email {
+    background-color: grey;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.table-container .button-imp:hover,
+.table-container .button-email:hover {
+    background-color: darkgrey;
+}
+
+/* Centrar columna de checkbox */
+.table-container th:first-child,
+.table-container td:first-child {
+    text-align: center;
+}
+
+/* Alinear a la derecha la columna de TOTAL y ESTADO */
+.table-container th:nth-child(7),
+.table-container th:nth-child(8),
+.table-container td:nth-child(7),
+.table-container td:nth-child(8) {
+    text-align: right;
+}
+
+/* Estilos para botones "IMPRIMIR SELECCIONADOS" y "ENVIAR POR EMAIL" */
+.button-print,
+.button-send {
+    background-color: grey;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button-print:hover,
+.button-send:hover {
+    background-color: darkgrey;
+}
+
+/* Estilos para la paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: darkgreen;
+}

@@ -6,17 +6,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Nombre del plugin: ConectaB2b
- * Versión file: 0.5
+ * Versión file: 0.6
  * Versión del plugin: 0.1
  * Date last mod: HH:MM - DD-MM-2024
  */
 
-/**
- * Añade contenido para el endpoint "Consultar Facturas", visible solo para roles específicos.
- */
-
- function facturas_content() {
+function facturas_content() {
     if ( current_user_can( get_option( 'conb2b_role', 'administrator' ) ) ) {
+        echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">';
         echo '<h3>' . __( 'Facturas', 'conectab2b' ) . '</h3>';
         echo '<p>' . __( 'Aquí podrás ver y descargar tus facturas.', 'conectab2b' ) . '</p>';
 
@@ -26,10 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         // Aquí se añade el formulario según las especificaciones
         ?>
         <form id="facturas-filter-form" method="post" action="">
-
             <!-- Bloque 1: Fechas -->
             <div class="form-row">
-                
                 <div class="form-group">
                     <label for="factura_fecha_inicio"><?php esc_html_e( 'Fecha inicio', 'conectab2b' ); ?></label>
                     <input type="text" id="factura_fecha_inicio" name="factura_fecha_inicio" value="<?php echo date('d/m/Y'); ?>" placeholder="dd/mm/aaaa" />
@@ -50,7 +45,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <!-- Bloque 2: Facturas -->
             <div class="form-row">
-                
                 <div class="form-group">
                     <label for="factura_numero_desde"><?php esc_html_e( 'Número de Factura Desde', 'conectab2b' ); ?></label>
                     <input type="number" id="factura_numero_desde" name="factura_numero_desde" value="0" min="0" max="9999999" />
@@ -63,7 +57,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <!-- Bloque 3: Obra -->
             <div class="form-row">
-                
                 <div class="form-group">
                     <label for="factura_obra"><?php esc_html_e( 'Obra', 'conectab2b' ); ?></label>
                     <select id="factura_obra" name="factura_obra">
@@ -81,6 +74,39 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <button type="submit" name="descargar_excel" class="button-secondary"><?php esc_html_e( 'Descargar Excel', 'conectab2b' ); ?></button>
             </div>
         </form>
+
+        <!-- Tabla para mostrar facturas -->
+        <div class="table-container">
+            <table id="facturas-table" class="table-container">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="select-all"></th>
+                        <th></th>
+                        <th></th>
+                        <th>FACT.</th>
+                        <th>FECHA</th>
+                        <th>OBRA</th>
+                        <th>TOTAL</th>
+                        <th>ESTADO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenarán las filas dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Botones al final de la tabla -->
+        <div class="form-row">
+            <button type="button" class="button-print">IMPRIMIR SELECCIONADOS</button>
+            <button type="button" class="button-send">ENVIAR POR EMAIL</button>
+        </div>
+
+        <!-- Paginación -->
+        <div id="pagination" class="pagination">
+            <!-- Aquí se generará la paginación -->
+        </div>
+
         <?php
         
         // Botón para probar la conexión con MockAPI
