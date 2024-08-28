@@ -72,7 +72,7 @@ document.getElementById('test-magicloops').addEventListener('click', function (e
 
                 // Total
                 const totalCell = document.createElement('td');
-                totalCell.innerText = item.total + '€';
+                totalCell.innerText = item.total + ' €';
                 row.appendChild(totalCell);
 
                 // Estado

@@ -6,6 +6,26 @@
     text-align: left;
 }
 
+.form-group input {
+    padding: 0 15px 0 15px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0 15px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group label {
+    display: inline-table;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
 .button-primary {
     background-color: green;
     color: white;
